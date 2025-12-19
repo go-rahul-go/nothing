@@ -1,0 +1,954 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+    * {
+        box-sizing: border-box;
+    }
+
+
+    .dm-sans {
+        font-family: "DM Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .doto {
+        font-family: "Doto", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        font-variation-settings:
+            "ROND" 0;
+    }
+
+    body {
+        width: 100%;
+        height: 100%;
+        font-family: "DM Sans", sans-serif;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 10px 0px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border: 2px solid rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 4;
+        height: 65px;
+    }
+
+    .navbar-hide {
+        position: fixed;
+        top: -100%;
+
+
+
+    }
+
+    .navbar-expand {
+        animation: expand 300ms ease-in forwards;
+    }
+
+    .glass {
+        background-color: rgba(245, 245, 245, 0.434);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 0px 10px;
+
+    }
+
+    .menu-items {
+        border-radius: 10px;
+    }
+
+    .inner-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-btn {
+        width: 25px;
+        height: 25px;
+        /* border: 1px solid black; */
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+    }
+
+    .menu-btn:hover {
+        cursor: pointer;
+    }
+
+    .show-menu {
+        display: flex;
+
+
+        background-color: white;
+        animation: expand 200ms ease-in forwards;
+        border-radius: 0px 0px 5px 5px;
+        position: relative;
+        z-index: 3;
+        top: 0;
+
+
+    }
+
+    @keyframes expand {
+        from {
+            height: 0vh;
+        }
+
+        to {
+            height: 100vh;
+        }
+
+    }
+
+    .home {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+    }
+
+    .home-control {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+
+    }
+
+    .hero {
+
+        padding: 50px 0px 0px 0px;
+        position: relative;
+
+
+    }
+
+    .clock {
+        position: absolute;
+        top: 20%;
+        left: 16vw;
+        background-color: ghostwhite;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-image: url("./assets/clock_face.svg");
+        z-index: 2;
+        box-shadow: 0px 0px 12px rgb(196, 195, 195);
+    }
+
+    .clock::after {
+        content: "";
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        background-color: red;
+        top: 44%;
+        left: 49%;
+        z-index: 2;
+        transform: translate(-49%, 49%);
+        border: 2px solid black;
+        border-radius: 50%;
+    }
+
+    .calender {
+        position: absolute;
+        z-index: 2;
+        width: 90px;
+        height: 90px;
+        background-color: ghostwhite;
+        top: 45%;
+        right: 18%;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .calender::before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background-color: rgb(217, 0, 0);
+        border-radius: 50%;
+        top: 7px;
+        left: 7px;
+    }
+
+    .c-day {
+        position: absolute;
+        top: 2px;
+        right: 5px;
+        color: rgb(189, 0, 0);
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+    .gly {
+
+        position: absolute;
+        width: 100px;
+        height: 100px;
+
+        bottom: 29vh;
+        /* left: 25vw; */
+        z-index: 2;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .hour {
+        position: absolute;
+        width: 2px;
+        height: 25px;
+        background-color: black;
+        top: 27%;
+        left: 47%;
+        transform-origin: bottom;
+    }
+
+    .min {
+        position: absolute;
+        width: 2px;
+        height: 35px;
+        background-color: rgb(0, 0, 0);
+        top: 17.5%;
+        left: 47.5%;
+        transform-origin: bottom;
+    }
+
+    .sec {
+        position: absolute;
+        width: 1px;
+        height: 35px;
+        background-color: rgb(255, 0, 0);
+        top: 18%;
+        left: 48%;
+        transform-origin: bottom;
+    }
+
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: red;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    .hero-product {
+        width: 100%;
+
+        border: 2px solid white;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        z-index: 2;
+    }
+
+    .inner-hero-product {
+        background-color: rgba(69, 69, 69, 0.598);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .inner-hero-product::after {
+        content: "SHOP";
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+        padding: 1px 10px;
+        background-color: rgb(98, 98, 98);
+        border-radius: 10px;
+        color: ghostwhite;
+        font-size: 0.75rem;
+    }
+
+    .dotted {
+        font-family: "Doto", sans-serif;
+        ;
+    }
+
+    .home-card {
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+        background-color: rgb(221, 255, 0);
+    }
+
+    .home-card-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: red;
+        z-index: 1;
+        overflow: hidden;
+
+
+    }
+
+    .homecard-prod {
+        width: 100%;
+
+        border: 2px solid rgb(255, 225, 0);
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        z-index: 2;
+
+    }
+
+    .inner-homecard-product {
+        display: flex;
+        border: 2px solid blue;
+        border-radius: 10px;
+        justify-content: space-between;
+
+    }
+
+    .glass-black {
+        background-color: rgba(78, 74, 74, 0.703);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+    .glass-white {
+        background-color: rgba(255, 255, 255, 0.685);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+    .footer {
+        position: relative;
+        z-index: 3;
+    }
+
+    .langbox {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+
+        left: 0px;
+        background-color: wheat;
+        z-index: 3;
+        animation: pop-up 250ms linear forwards;
+        display: grid;
+        place-items: center;
+
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
+    }
+
+    @keyframes pop-up {
+        from {
+            top: 100vh;
+            background-color: rgba(255, 255, 255, 0);
+
+        }
+
+        to {
+            top: 0px;
+            background-color: rgba(255, 255, 255, 0.444);
+        }
+
+    }
+
+    .langbox-gone {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.393);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        position: fixed;
+
+        left: 0px;
+        z-index: 3;
+        animation: pop-down 300ms linear forwards;
+        display: grid;
+        place-items: center;
+
+
+
+    }
+
+    @keyframes pop-down {
+        from {
+            top: 0px;
+            background-color: rgba(255, 255, 255, 0.393);
+        }
+
+        to {
+            top: 100vh;
+            background-color: rgba(255, 255, 255, 0);
+        }
+    }
+
+    .lang-header {
+
+        /* text-align: center; */
+        padding: 13px 0px 13px 12px;
+
+        text-transform: capitalize;
+        position: relative;
+        z-index: 2;
+        /* background-color: rgb(221, 255, 0); */
+    }
+
+    /* .lang-header::after{
+        content:"";
+        position: absolute;
+        width:90%;
+        height:2px;
+        background-color: rgb(202, 202, 202);
+        bottom:0;
+        left:5%;
+    } */
+    .lang-close {
+        /* background-color: red; */
+        z-index: 3
+    }
+
+    .phone3-hero {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+    }
+
+    .buy-phone3 {
+        position: fixed;
+        bottom: 10px;
+
+        z-index: 3;
+
+
+        background: rgba(65, 65, 65, 0.533);
+        animation: go-up 500ms linear forwards;
+        padding:8px;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 7px;
+        width: 40%;
+        left:30%;
+
+    }
+
+    @keyframes go-up {
+        from {
+            bottom: -100vh;
+        }
+
+        to {
+            bottom: 10px;
+        }
+
+    }
+
+    .hide-phone3 {
+        position: fixed;
+        bottom: 10px;
+
+        z-index: 3;
+        border-radius: 7px;
+
+        background: rgba(65, 65, 65, 0.533);
+        animation: go-down 500ms linear forwards;
+        padding: 10px;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        width: 40%;
+        left: 30%;
+    }
+
+    @keyframes go-down {
+        from {
+            bottom: 10px;
+        }
+
+        to {
+            bottom: -100vh;
+        }
+    }
+
+    .phone3-dialogue {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+        background-color: rgb(218, 218, 218);
+        color: rgb(55, 55, 55);
+        border-radius: 7px;
+        padding: 4px;
+    }
+
+   
+
+    .phone3-size {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+         transform: translateY(100%);
+       background-color: rgb(218, 218, 218);
+        color: rgb(55, 55, 55);
+        border-radius: 7px;
+        user-select: none;
+    }
+.phone3-options>p{
+    user-select: none;
+}
+    .pc-widgets {
+        /* display: block; */
+        width: 85px;
+        height: 85px;
+        transition: all 340ms linear;
+        border-radius: 10px;
+    }
+
+    .pc-widgets:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    .spec-box {
+
+
+        position: absolute;
+        top: 20vh;
+        left: 100px;
+        z-index: 3;
+       
+
+    }
+
+
+
+    .spec-box::after {
+        content: "specs";
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        transform: translate(45%,60%);
+        color: white;
+
+    }
+
+    .essential-box {
+        position: absolute;
+        bottom: 45%;
+        left: 17%;
+        background-color: red;
+        z-index: 3;
+    }
+
+    .essential-box::after {
+        content: "Essential";
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        transform: translate(15%, 120%);
+        color: white;
+
+    }
+
+    .stacked-card-pc {
+        position: absolute;
+        top: 40%;
+        right: 10%;
+        z-index: 3;
+        border: 2px solid red;
+        display: grid;
+        place-items: center;
+        transition: all 100ms linear;
+    }
+
+    .stacked-card-pc::after {
+        content: "Design";
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        transform: translate(30%, 120%);
+        color: white;
+    }
+
+    .stacked-card-pc div {
+        width: 80%;
+        height: 80%;
+
+        position: absolute;
+        border-radius: 10px;
+    }
+
+    .stacked-card1 {
+        background-color: tomato;
+        z-index: 3;
+        transform: rotate(25deg);
+        transition: all 100ms linear;
+    }
+
+    .stacked-card2 {
+        background-color: rgb(4, 47, 174);
+        z-index: 2;
+
+    }
+
+    .stacked-card3 {
+        background-color: rgb(255, 212, 19);
+        z-index: 1;
+        transform: rotate(-25deg);
+        transition: all 100ms linear;
+    }
+
+    .stacked-card-pc:hover {
+        transform: scale(1.05);
+    }
+
+    .stacked-card-pc:hover .stacked-card1 {
+        transform: translateX(-5px) rotate(25deg);
+    }
+
+    .stacked-card-pc:hover .stacked-card3 {
+        transform: translateX(5px) rotate(-25deg);
+    }
+
+    .pro-camera-pc {
+        position: absolute;
+        bottom: 20%;
+        right: 5%;
+        background-color: yellow;
+    }
+
+    .pro-camera-pc::after {
+        content: "Pro camera system";
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        transform: translate(0%, 120%);
+        text-align: center;
+        line-height: 1.2rem;
+        color: white;
+    }
+
+    .glyph-inter-pc {
+        position: absolute;
+        /* background-color: thistle; */
+        top: 17%;
+        right: 20%;
+        z-index: 3;
+    }
+
+    .glyph-inter-pc::after {
+        content: "Glyph Interface";
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        transform: translate(0%, 120%);
+        color: white;
+        text-align: center;
+        line-height: 18px;
+
+    }
+
+    .performance-pc {
+        width: 150px;
+        height: 150px;
+        background-color: chocolate;
+        position: absolute;
+        bottom: 16%;
+        left: 3%;
+    }
+
+    .performance-pc::after {
+        content: "Performance";
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        transform: translate(30%, 130%);
+        color: white;
+        font-weight: 300;
+
+
+    }
+
+
+    .phone3-specs {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(159, 159, 159, 0.56);
+        padding: 20px 0px;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        animation: fromAbove 210ms linear forwards;
+    }
+
+    @keyframes fromAbove {
+        from{
+            top:-100%;
+            opacity: 0;
+        }
+        to{
+            top:0;
+            opacity: 1;
+        }
+        
+    }
+.phone3-specbox{
+    overflow: scroll;
+}
+.spec-title-bar{
+       background-color: rgba(14, 14, 14, 0.504);
+        
+         backdrop-filter: blur(10px);
+         -webkit-backdrop-filter: blur(10px);
+         border-radius: 0.3rem;
+}
+    .spec-child-box {
+
+        user-select: none;
+         background-color: rgba(14, 14, 14, 0.504);
+         margin-bottom: 2px;
+         backdrop-filter: blur(10px);
+         -webkit-backdrop-filter: blur(10px);
+    }
+.spec-child-ghost-box{
+    margin:1rem auto 0px auto;
+    /* border:2px solid red; */
+}
+.phone3-arrow-down{
+    transform: rotate(180deg);
+    transition: all 250ms linear;
+}
+ .phone3-arrow-up{
+    transform: rotate(0deg);
+    transition: all 250ms linear;
+
+}   
+
+   
+
+    .display-pc {
+        position: absolute;
+        background-color: tomato;
+        top: 15%;
+        left: 25%;
+    }
+
+    .display-pc::after {
+        content: "AMOLED Display";
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        transform: translate(1%, 120%);
+        color: white;
+        text-align: center;
+        font-weight: 300;
+    }
+
+    .camera-pc {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        top: 15%;
+        left: 40%;
+        background-color: chartreuse;
+    }
+
+    .camera-pc::after {
+        position: absolute;
+        content: "Camera in action";
+        color: white;
+        left: 0px;
+        bottom: 0px;
+        transform: translate(10%, 130%);
+        font-weight: 300;
+    }
+
+    .everything-pc {
+        position: absolute;
+        background-color: tan;
+        right: 20%;
+        top: 30%;
+    }
+
+    .everything-pc::after {
+        content: "Everything you need";
+        position: absolute;
+        text-align: center;
+        bottom: 0px;
+        left: 0px;
+        color: white;
+        transform: translate(1%, 120%);
+        line-height: 1.3rem;
+
+    }
+
+    .nothing-os-pc {
+        position: absolute;
+        bottom: 28%;
+        right: 30%;
+        background-color: blue;
+    }
+
+    .nothing-os-pc::after {
+        content: "Nothing OS";
+        position: absolute;
+        text-align: center;
+        bottom: 0px;
+        left: 0px;
+        color: white;
+        transform: translate(1%, 130%);
+
+
+    }
+
+    .glyph-mirror-pc {
+        position: absolute;
+        background-color: plum;
+        bottom: 14%;
+        right: 45%;
+
+    }
+
+    .glyph-mirror-pc::after {
+        content: "Glyph Mirror";
+        position: absolute;
+        text-align: center;
+        bottom: 0px;
+        left: 0px;
+        color: white;
+        transform: translate(0%, 120%);
+        line-height: 1.3rem;
+
+
+    }
+
+    .true-lens-pc {
+        position: absolute;
+        bottom: 20%;
+        width: 180px;
+        height: 180px;
+        left: 12%;
+        background-color: aqua;
+    }
+    .true-lens-pc::after{
+        position: absolute;
+        content:"True lens Engine 4";
+        bottom:0;
+        left:0;
+        width:100%;
+        transform: translate(13%,135%);
+        color:ghostwhite;
+        line-height: 1.3rem;
+    }
+    .pc-sub-widgets-box {
+        display: block;
+        width: 100%;
+
+
+    }
+
+    .mob-sub-widgets-box {
+        display: none;
+    }
+
+
+
+.mob-design-card{
+    position: absolute;
+    width:65%;
+    height:75%;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.mob-design-card1{
+    background-color: red;
+    transform: rotate(-20deg);
+    z-index:2
+}
+.mob-design-card2{
+    z-index:1;
+    background-color: rgb(30, 255, 0);
+}
+.mob-design-card3{
+    background-color: rgb(255, 234, 0);
+    transform: rotate(20deg);
+    z-index:0
+
+}
+
+    /*small screens*/
+    @media (max-width: 768px) {
+        .clock {
+            left: 61%;
+            top: 40%;
+
+        }
+
+        .calender {
+            left: 10%;
+            top: 12%;
+        }
+
+        .buy-phone3 {
+            width: 95%;
+            left:2.5%;
+        }
+
+        .hide-phone3 {
+            width: 95%;
+            left:2.5%;
+        }
+
+        .pc-sub-widgets-box {
+            display: none;
+        }
+
+        .mob-sub-widgets-box {
+            display: block;
+            width: 100%;
+
+            background-color: rgb(192, 0, 240);
+        }
+
+        .pc-widgets {
+            display: none;
+        }
+    }
+
+}
