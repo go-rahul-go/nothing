@@ -7,6 +7,8 @@ import { Link } from 'react-router'
 import glyphinterVideo from "../assets/phone3-assets/videos/glyph_interface.mp4"
 import essentialVideo from "../assets/phone3-assets/videos/essential.mp4"
 import cameraVideo from "../assets/phone3-assets/videos/pro_camera.mp4"
+import osvideo from "../assets/phone3-assets/videos/nothingos.mp4"
+
 import design1 from "../assets/phone3-assets/design.jpg"
 import design2 from "../assets/phone3-assets/design_back2.jpg"
 import design3 from "../assets/phone3-assets/design_back3.jpg"
@@ -43,6 +45,14 @@ import blackphone from "../assets/phone3-assets/phone3-black-icon.png"
 import buyphoneinterfaceIcon from "../assets/phone3-assets/icons/buyphone-interface.svg"
 import buyphonecameraIcon from "../assets/phone3-assets/icons/buyphone-camera.svg"
 import buyphonesearchIcon from "../assets/phone3-assets/icons/buyphone-search.svg"
+
+
+//gsap imports
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+
 
 const Phone3 = () => {
     const menu = useContext(MenuContext)
@@ -96,7 +106,7 @@ const Phone3 = () => {
                 <div className='mob-sub-widgets-box'>
                     <MobSubWidgets specVisibility={specVisibility} showSpec={showSpec} />
                 </div>
-                <div className='w-full h-[100vh] bg-purple-400'></div>
+                <Phone3Others />
                 {
                     showSpec && <Phone3Specs specVisibility={specVisibility} />
                 }
@@ -266,7 +276,11 @@ const EverythingYouNeedPC = () => {
 }
 const NothingOsPc = () => {
     return (
-        <div className='nothing-os-pc pc-widgets'></div>
+        <div className='nothing-os-pc pc-widgets'>
+            <div className='w-full h-full rounded-[10px] overflow-hidden'>
+                <video src={osvideo} muted={true} loop={true} className='w-full h-full object-cover ' autoPlay={true} />
+            </div>
+        </div>
     )
 }
 const GlpyhMirrorPC = () => {
@@ -278,9 +292,9 @@ const TrueLensPc = () => {
     return (
         <div className='true-lens-pc pc-widgets'>
             <div className='w-full h-full overflow-hidden rounded-[10px]'>
-                <img src={truelensPic} alt="" className='w-full h-full object-cover'/>
+                <img src={truelensPic} alt="" className='w-full h-full object-cover' />
             </div>
-            
+
         </div>
     )
 }
@@ -777,14 +791,42 @@ const MobSubWidgets = ({ specVisibility, showSpec }) => {
                 title: "nothing 0S 4.0"
             }
         ],
-        []
+        [
+
+
+        ]
     ]
     return (
         <div className='w-[95%] h-full bg-red-300 mx-auto py-4'>
 
 
             <div className='grid w-full h-full p-2 grid-cols-3 gap-2  text-sm '>
-                <div className='w-full  bg-red-400 flex flex-col mob-sub-widgets' onClick={() => specVisibility(!showSpec)} >
+                {
+                    mobMedia[0].map((item, index) => {
+                        if (index === 2) {
+                            return (
+                                <div className='w-full  bg-red-400 flex flex-col mob-sub-widgets' key={index}>
+                                    <div className='w-full h-[25vw] bg-blue-400 overflow-hidden grid place-items-center relative'>
+                                        <div className='mob-design-card mob-design-card1'></div>
+                                        <div className='mob-design-card mob-design-card2'></div>
+                                        <div className='mob-design-card mob-design-card3'></div>
+                                    </div>
+                                    <div className='text-center capitalize py-2 grid place-items-center'>design</div>
+                                </div>
+                            )
+                        }
+                        else {
+                            return (
+                                <div className='w-full  bg-red-400 flex flex-col mob-sub-widgets'
+                                    onClick={() => { index == 0 ? specVisibility(!showSpec) : "" }} key={index}>
+                                    <div className='w-full h-[25vw] bg-blue-400'></div>
+                                    <div className='text-center capitalize py-2 grid place-items-center'>sepcs</div>
+                                </div>
+                            )
+                        }
+                    })
+                }
+                {/* <div className='w-full  bg-red-400 flex flex-col mob-sub-widgets' onClick={() => specVisibility(!showSpec)} >
                     <div className='w-full h-[25vw] bg-blue-400'></div>
                     <div className='text-center capitalize py-2 grid place-items-center'>sepcs</div>
                 </div>
@@ -809,7 +851,7 @@ const MobSubWidgets = ({ specVisibility, showSpec }) => {
                 <div className='w-full  bg-red-400 flex flex-col mob-sub-widgets' >
                     <div className='w-full h-[25vw] bg-blue-400'></div>
                     <div className='text-center capitalize py-2 grid place-items-center'>specs</div>
-                </div>
+                </div> */}
             </div>
 
 
@@ -843,10 +885,67 @@ const MobSubWidgets = ({ specVisibility, showSpec }) => {
                     <div className='w-full h-[25vw] bg-blue-400'></div>
                     <div className='text-center capitalize py-2'>everything you need</div>
                 </div>
+                <div className='w-full  bg-red-400 flex flex-col opacity-0'>
+                    <div className='w-full h-[25vw] bg-blue-400'></div>
+                    <div className='text-center capitalize py-2'> </div>
+                </div>
                 <div className='w-full  bg-red-400 flex flex-col'>
                     <div className='w-full h-[25vw] bg-blue-400'></div>
                     <div className='text-center capitalize py-2'>camera in action</div>
                 </div>
+            </div>
+        </div>
+    )
+}
+
+
+const Phone3Others = () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+
+    useGSAP(() => {
+
+       
+        gsap.set("#orange", { clipPath: "inset(0 0 0 100%)", })
+        gsap.set("#blue", { clipPath: "inset(0 0 0 100%)", })
+
+
+        gsap.to("#orange",
+            {
+                clipPath: "inset(0% 0% 0% 0%)",
+                snap: true,
+                scrollTrigger: {
+                    trigger: "#green",
+                    start: "top -10%",
+                    end: "bottom bottom",
+                    scrub: 2,
+
+                },
+                onComplete: () => {
+                    gsap.to("#blue",
+                        {
+                            clipPath: "inset(0% 0% 0% 0%)",
+                            snap: true,
+                            scrollTrigger: {
+                                trigger: ".phone3-others-photo",
+                                start: "top top",
+                                end: "bottom bottom",
+                                scrub: 2
+                            }
+                        }
+                    )
+                }
+            })
+
+
+    }, [])
+    return (
+        <div className='phone-3-others'>
+            <div className='phone3-others-parent'>
+                <div className='bg-green-400 phone3-others-photo border' id="green"></div>
+                <div className='bg-orange-500 phone3-others-photo border' id="orange"></div>
+                <div className='bg-blue-500 phone3-others-photo border' id="blue"></div>
+
             </div>
         </div>
     )
