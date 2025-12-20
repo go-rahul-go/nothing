@@ -15,11 +15,14 @@ import design3 from "../assets/phone3-assets/design_back3.jpg"
 import performancePic from "../assets/phone3-assets/performance.jpg"
 import specsPic from "../assets/phone3-assets/specs.svg"
 import SpecBoxImg from '../assets/phone3-assets/specbox1.jpg'
+import everythingpic from "../assets/phone3-assets/everything-you-need.jpg"
+
+
 
 import truelensPic from "../assets/phone3-assets/truelens.jpg"
-
-
-
+import displayPic from "../assets/phone3-assets/display.png"
+import cameraPic from "../assets/phone3-assets/camera.jpg"
+import mirrorPic from "../assets/phone3-assets/glyph_mirror.jpg"
 
 import boxIcon from "../assets/phone3-assets/icons/box-icon.svg";
 import dimensionIcon from "../assets/phone3-assets/icons/dimension-icon.svg";
@@ -52,7 +55,10 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-
+//others section images
+import o1 from "../assets/phone3-assets/others1.jpg"
+import o2 from '../assets/phone3-assets/others2.jpg'
+import o3 from "../assets/phone3-assets/others3.jpg"
 
 const Phone3 = () => {
     const menu = useContext(MenuContext)
@@ -259,19 +265,29 @@ const PerformancePc = () => {
 }
 const DisplayPC = () => {
     return (
-        <div className='display-pc pc-widgets'></div>
+        <div className='display-pc pc-widgets '>
+            <div className='w-full h-full rounded-[10px] overflow-hidden'>
+                <img src={displayPic} alt="" className='w-full h-full object-cover' />
+            </div>
+        </div>
     )
 }
 const CameraPc = () => {
     return (
         <div className='camera-pc pc-widgets'>
-
+            <div className='w-full h-full rounded-[10px] overflow-hidden'>
+                <img src={cameraPic} alt="" className='w-full h-full object-cover' />
+            </div>
         </div>
     )
 }
 const EverythingYouNeedPC = () => {
     return (
-        <div className='everything-pc pc-widgets'></div>
+        <div className='everything-pc pc-widgets'>
+            <div className='w-full h-full rounded-[10px] overflow-hidden'>
+                <img src={everythingpic} alt="" className='w-full h-full object-cover' />
+            </div>
+        </div>
     )
 }
 const NothingOsPc = () => {
@@ -285,7 +301,11 @@ const NothingOsPc = () => {
 }
 const GlpyhMirrorPC = () => {
     return (
-        <div className='glyph-mirror-pc pc-widgets'></div>
+        <div className='glyph-mirror-pc pc-widgets'>
+            <div className='w-full h-full rounded-[10px] overflow-hidden'>
+                <img src={mirrorPic} alt="" className='w-full h-full object-cover' />
+            </div>
+        </div>
     )
 }
 const TrueLensPc = () => {
@@ -772,32 +792,72 @@ const MobSubWidgets = ({ specVisibility, showSpec }) => {
         [
             {
                 id: 0,
-                title: "glyph interface"
+                title: "specs",
+                url: specsPic
             },
             {
                 id: 1,
-                title: "AMOLED display"
+                title: "performance",
+                url: performancePic
             },
             {
                 id: 2,
-                title: "specs technical"
+                title: "design",
+                url: [design1, design2, design3]
             },
             {
                 id: 3,
-                title: "essential"
+                title: "everything you need",
+                url: everythingpic
             },
             {
                 id: 4,
-                title: "nothing 0S 4.0"
+                title: "camera in action",
+                url: cameraPic
             }
         ],
         [
 
-
+            {
+                id: 0,
+                title: "glyph interface",
+                url: glyphinterVideo,
+                opacity: 1
+            },
+            {
+                id: 1,
+                title: "AMOLED display",
+                url: displayPic,
+                opacity: 1
+            },
+            {
+                id: 2,
+                title: "essential",
+                url: essentialVideo,
+                opacity: 1
+            },
+            {
+                id: 3,
+                title: "everything you need",
+                url: everythingpic,
+                opacity: 1
+            },
+            {
+                id: 4,
+                title: "camera in action",
+                url: cameraPic,
+                opacity: 0
+            },
+            {
+                id: 5,
+                title: "glyph mirror",
+                url: mirrorPic,
+                opacity: 1
+            }
         ]
     ]
     return (
-        <div className='w-[95%] h-full bg-red-300 mx-auto py-4'>
+        <div className='w-[95%] h-full  mx-auto py-4 text-slate-200'>
 
 
             <div className='grid w-full h-full p-2 grid-cols-3 gap-2  text-sm '>
@@ -805,71 +865,86 @@ const MobSubWidgets = ({ specVisibility, showSpec }) => {
                     mobMedia[0].map((item, index) => {
                         if (index === 2) {
                             return (
-                                <div className='w-full  bg-red-400 flex flex-col mob-sub-widgets' key={index}>
-                                    <div className='w-full h-[25vw] bg-blue-400 overflow-hidden grid place-items-center relative'>
-                                        <div className='mob-design-card mob-design-card1'></div>
-                                        <div className='mob-design-card mob-design-card2'></div>
-                                        <div className='mob-design-card mob-design-card3'></div>
+                                <div className='w-full   flex flex-col mob-sub-widgets' key={index}>
+                                    <div className='w-full h-[25vw] overflow-hidden grid place-items-center relative'>
+                                        <div className='mob-design-card mob-design-card1 overflow-hidden'>
+                                            <img src={item.url[0]} alt="" className='h-full w-full object-cover' />
+                                        </div>
+                                        <div className='mob-design-card mob-design-card2 overflow-hidden'>
+                                            <img src={item.url[1]} alt="" className='h-full w-full object-cover' />
+                                        </div>
+                                        <div className='mob-design-card mob-design-card3 overflow-hidden'>
+                                            <img src={item.url[2]} alt="" className='h-full w-full object-cover' />
+                                        </div>
                                     </div>
-                                    <div className='text-center capitalize py-2 grid place-items-center'>design</div>
+                                    <div className='text-center capitalize py-2 grid place-items-center'>{item.title}</div>
                                 </div>
                             )
                         }
                         else {
                             return (
-                                <div className='w-full  bg-red-400 flex flex-col mob-sub-widgets'
+                                <div className='w-full   flex flex-col mob-sub-widgets'
                                     onClick={() => { index == 0 ? specVisibility(!showSpec) : "" }} key={index}>
-                                    <div className='w-full h-[25vw] bg-blue-400'></div>
-                                    <div className='text-center capitalize py-2 grid place-items-center'>sepcs</div>
+                                    <div className='w-full h-[25vw]  overflow-hidden rounded-lg'>
+                                        <img src={item.url ? item.url : ""} alt="no pic" className='h-full w-full object-cover' />
+                                    </div>
+                                    <div className='text-center capitalize py-2 grid place-items-center'>{item.title}</div>
                                 </div>
                             )
                         }
                     })
                 }
-                {/* <div className='w-full  bg-red-400 flex flex-col mob-sub-widgets' onClick={() => specVisibility(!showSpec)} >
-                    <div className='w-full h-[25vw] bg-blue-400'></div>
-                    <div className='text-center capitalize py-2 grid place-items-center'>sepcs</div>
-                </div>
-                <div className='w-full  bg-red-400 flex flex-col mob-sub-widgets' >
-                    <div className='w-full h-[25vw] bg-blue-400'></div>
-                    <div className='text-center capitalize py-2 grid place-items-center'>sepcs</div>
-                </div>
 
-                <div className='w-full  bg-red-400 flex flex-col mob-sub-widgets' >
-                    <div className='w-full h-[25vw] bg-blue-400 overflow-hidden grid place-items-center relative'>
-                        <div className='mob-design-card mob-design-card1'></div>
-                        <div className='mob-design-card mob-design-card2'></div>
-                        <div className='mob-design-card mob-design-card3'></div>
+            </div>
+
+
+            {/*mid section */}
+            <div className='w-full h-full  p-2 flex gap-2'>
+                <div className='w-[32%]  flex flex-col '>
+                    <div className='w-full h-[25vw] bg-pink-500 overflow-hidden rounded-lg'>
+                        <video src={cameraVideo} loop={true} muted={true} autoPlay={true} />
                     </div>
-                    <div className='text-center capitalize py-2 grid place-items-center'>design</div>
+                    <div className='text-center capitalize py-2'>A pro camera system</div>
                 </div>
-
-                <div className='w-full  bg-red-400 flex flex-col mob-sub-widgets' >
-                    <div className='w-full h-[25vw] bg-blue-400'></div>
-                    <div className='text-center capitalize py-2 grid place-items-center'>sepcs</div>
-                </div>
-                <div className='w-full  bg-red-400 flex flex-col mob-sub-widgets' >
-                    <div className='w-full h-[25vw] bg-blue-400'></div>
-                    <div className='text-center capitalize py-2 grid place-items-center'>specs</div>
-                </div> */}
-            </div>
-
-
-
-            <div className='w-full h-full bg-orange-400 p-2 flex gap-2'>
-                <div className='w-[32%] bg-green-500 flex flex-col '>
-                    <div className='w-full h-[25vw] bg-pink-500 '></div>
-                    <div className='text-center capitalize py-2'>glyph interface</div>
-                </div>
-                <div className='w-[60%] bg-green-500 flex flex-col '>
-                    <div className='w-full h-[45vw] bg-pink-500'></div>
-                    <div className='text-center capitalize py-2'>glyph interface</div>
+                <div className='w-[60%]  flex flex-col '>
+                    <div className='w-full h-[45vw] bg-pink-500 overflow-hidden rounded-lg'>
+                        <img src={truelensPic} alt="" className='w-full h-full object-cover' />
+                    </div>
+                    <div className='text-center capitalize py-2'>true lens 4</div>
                 </div>
             </div>
 
+            {/*last section */}
 
-            <div className='grid w-full h-full p-2 grid-cols-3 gap-2  text-sm '>
-                <div className='w-full  bg-red-400 flex flex-col'>
+            <div className='grid w-full h-full p-2 grid-cols-3 gap-2  text-sm text-slate-200'>
+                {
+                    mobMedia[1].map((item, index) => {
+
+                        if (item.id !== 4) {
+                            return (
+                                <div className={`w-full   flex flex-col opacity-1`}>
+                                    <div className='w-full h-[25vw]  rounded-lg overflow-hidden'>
+                                        {
+                                            (item.id === 0 || item.id === 2) ? <video src={item.url} muted={true} loop={true} autoPlay={true} controls={false} /> : <img src={item.url} alt="" className='w-full h-full object-cover' />
+                                        }
+                                    </div>
+                                    <div className='text-center capitalize py-2'>{item.title}</div>
+                                </div>
+                            )
+
+                        }
+                        else {
+                            return (
+                                <div className='w-full   flex flex-col opacity-0'>
+                                    <div className='w-full h-[25vw] '></div>
+                                    <div className='text-center capitalize py-2'>glyph mirror</div>
+                                </div>
+                            )
+                        }
+
+                    })
+                }
+                {/* <div className='w-full  bg-red-400 flex flex-col'>
                     <div className='w-full h-[25vw] bg-blue-400'></div>
                     <div className='text-center capitalize py-2'>glyph mirror</div>
                 </div>
@@ -892,7 +967,7 @@ const MobSubWidgets = ({ specVisibility, showSpec }) => {
                 <div className='w-full  bg-red-400 flex flex-col'>
                     <div className='w-full h-[25vw] bg-blue-400'></div>
                     <div className='text-center capitalize py-2'>camera in action</div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
@@ -905,9 +980,9 @@ const Phone3Others = () => {
 
     useGSAP(() => {
 
-       
-        gsap.set("#orange", { clipPath: "inset(0 0 0 100%)", })
-        gsap.set("#blue", { clipPath: "inset(0 0 0 100%)", })
+
+        gsap.set("#orange", { clipPath: "inset(0% 0% 0% 100%)", })
+        gsap.set("#blue", { clipPath: "inset(0% 0% 0% 100%)", })
 
 
         gsap.to("#orange",
@@ -915,7 +990,7 @@ const Phone3Others = () => {
                 clipPath: "inset(0% 0% 0% 0%)",
                 snap: true,
                 scrollTrigger: {
-                    trigger: "#green",
+                    trigger: "#orange",
                     start: "top -10%",
                     end: "bottom bottom",
                     scrub: 2,
@@ -927,7 +1002,7 @@ const Phone3Others = () => {
                             clipPath: "inset(0% 0% 0% 0%)",
                             snap: true,
                             scrollTrigger: {
-                                trigger: ".phone3-others-photo",
+                                trigger: "#blue",
                                 start: "top top",
                                 end: "bottom bottom",
                                 scrub: 2
@@ -942,9 +1017,15 @@ const Phone3Others = () => {
     return (
         <div className='phone-3-others'>
             <div className='phone3-others-parent'>
-                <div className='bg-green-400 phone3-others-photo border' id="green"></div>
-                <div className='bg-orange-500 phone3-others-photo border' id="orange"></div>
-                <div className='bg-blue-500 phone3-others-photo border' id="blue"></div>
+                <div className=' phone3-others-photo' id="green">
+                    <img src={o1} className='w-full h-full object-cover object-center' />
+                </div>
+                <div className=' phone3-others-photo' id="orange">
+                    <img src={o2} className='w-full h-full object-cover object-center' />
+                </div>
+                <div className=' phone3-others-photo' id="blue">
+                    <img src={o3} className='w-full h-full object-cover object-center' />
+                </div>
 
             </div>
         </div>

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router'
+
 import menuIcon from "../assets/menu.svg"
 import closeIcon from "../assets/close.svg"
 import storeIcon from "../assets/cart.svg"
@@ -34,13 +35,13 @@ const NavBar = ({ changeMenuOpen }) => {
   }, [prevPos])
   return (
     <div className={`${menuVis ? "navbar" : "navbar-hide"} ${showMenu ? "navbar-expand glass" : "no-glass"}`}>
-      <div className='bg-slate-200 w-[80%] md:w-[40%] h-full overflow-hidden menu-items'>
+      <div className=' w-[85%] md:w-[40%] h-full overflow-hidden menu-items'>
         <div className='header  h-[40px]'>
           <div onClick={() => { changeMenu(!showMenu); changeMenuOpen(!showMenu) }} className='menu-btn'>
 
             <img src={showMenu ? closeIcon : menuIcon} alt="" className='w-full h-full object-cover' />
           </div>
-          <Link className='dotted font-semibold text-xl uppercase'>nothing(r)</Link>
+          <Link className='dotted font-semibold text-xl uppercase' to="/">nothing(r)</Link>
           <div className='menu-btn'>
             <img src={storeIcon} alt="" className='w-full h-full object-cover' />
           </div>

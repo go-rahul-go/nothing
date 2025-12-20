@@ -59,9 +59,10 @@
     }
 
     .glass {
-        background-color: rgba(245, 245, 245, 0.434);
+        background-color: rgba(71, 71, 71, 0.741);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
+        
     }
 
     .header {
@@ -70,11 +71,19 @@
         align-items: center;
         position: relative;
         padding: 0px 10px;
+         background-color: rgba(71, 71, 71, 0.741);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        color:ghostwhite
 
     }
 
     .menu-items {
         border-radius: 10px;
+         background-color: rgba(71, 71, 71, 0.741);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+         color:ghostwhite
     }
 
     .inner-menu {
@@ -85,8 +94,8 @@
     }
 
     .menu-btn {
-        width: 25px;
-        height: 25px;
+        width: 23px;
+        height: 23px;
         /* border: 1px solid black; */
         display: grid;
         place-items: center;
@@ -454,13 +463,13 @@
 
         background: rgba(65, 65, 65, 0.533);
         animation: go-up 500ms linear forwards;
-        padding:8px;
+        padding: 8px;
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border-radius: 7px;
         width: 40%;
-        left:30%;
-       
+        left: 30%;
+
 
     }
 
@@ -489,7 +498,7 @@
         -webkit-backdrop-filter: blur(20px);
         width: 40%;
         left: 30%;
-       
+
     }
 
     @keyframes go-down {
@@ -513,21 +522,23 @@
         padding: 4px;
     }
 
-   
+
 
     .phone3-size {
         position: absolute;
         bottom: 0;
         left: 0;
-         transform: translateY(100%);
-       background-color: rgb(218, 218, 218);
+        transform: translateY(100%);
+        background-color: rgb(218, 218, 218);
         color: rgb(55, 55, 55);
         border-radius: 7px;
         user-select: none;
     }
-.phone3-options>p{
-    user-select: none;
-}
+
+    .phone3-options>p {
+        user-select: none;
+    }
+
     .pc-widgets {
         /* display: block; */
         width: 85px;
@@ -548,7 +559,7 @@
         top: 20vh;
         left: 100px;
         z-index: 3;
-       
+
 
     }
 
@@ -559,7 +570,7 @@
         position: absolute;
         bottom: 0px;
         left: 0px;
-        transform: translate(45%,60%);
+        transform: translate(45%, 60%);
         color: white;
 
     }
@@ -717,49 +728,56 @@
     }
 
     @keyframes fromAbove {
-        from{
-            top:-100%;
+        from {
+            top: -100%;
             opacity: 0;
         }
-        to{
-            top:0;
+
+        to {
+            top: 0;
             opacity: 1;
         }
-        
+
     }
-.phone3-specbox{
-    overflow: scroll;
-}
-.spec-title-bar{
-       background-color: rgba(14, 14, 14, 0.504);
-        
-         backdrop-filter: blur(10px);
-         -webkit-backdrop-filter: blur(10px);
-         border-radius: 0.3rem;
-}
+
+    .phone3-specbox {
+        overflow: scroll;
+    }
+
+    .spec-title-bar {
+        background-color: rgba(14, 14, 14, 0.504);
+
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 0.3rem;
+    }
+
     .spec-child-box {
 
         user-select: none;
-         background-color: rgba(14, 14, 14, 0.504);
-         margin-bottom: 2px;
-         backdrop-filter: blur(10px);
-         -webkit-backdrop-filter: blur(10px);
+        background-color: rgba(14, 14, 14, 0.504);
+        margin-bottom: 2px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
-.spec-child-ghost-box{
-    margin:1rem auto 0px auto;
-    /* border:2px solid red; */
-}
-.phone3-arrow-down{
-    transform: rotate(180deg);
-    transition: all 250ms linear;
-}
- .phone3-arrow-up{
-    transform: rotate(0deg);
-    transition: all 250ms linear;
 
-}   
+    .spec-child-ghost-box {
+        margin: 1rem auto 0px auto;
+        /* border:2px solid red; */
+    }
 
-   
+    .phone3-arrow-down {
+        transform: rotate(180deg);
+        transition: all 250ms linear;
+    }
+
+    .phone3-arrow-up {
+        transform: rotate(0deg);
+        transition: all 250ms linear;
+
+    }
+
+
 
     .display-pc {
         position: absolute;
@@ -865,16 +883,18 @@
         left: 12%;
         background-color: aqua;
     }
-    .true-lens-pc::after{
+
+    .true-lens-pc::after {
         position: absolute;
-        content:"True lens Engine 4";
-        bottom:0;
-        left:0;
-        width:100%;
-        transform: translate(13%,135%);
-        color:ghostwhite;
+        content: "True lens Engine 4";
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        transform: translate(13%, 135%);
+        color: ghostwhite;
         line-height: 1.3rem;
     }
+
     .pc-sub-widgets-box {
         display: block;
         width: 100%;
@@ -888,58 +908,64 @@
 
 
 
-.mob-design-card{
-    position: absolute;
-    width:65%;
-    height:75%;
-    background-color: antiquewhite;
-    border-radius: 10px;
-    overflow: hidden;
+    .mob-design-card {
+        position: absolute;
+        width: 65%;
+        height: 75%;
+        background-color: antiquewhite;
+        border-radius: 10px;
+        overflow: hidden;
 
-}
+    }
 
-.mob-design-card1{
-    background-color: red;
-    transform: rotate(-20deg);
-    z-index:2
-}
-.mob-design-card2{
-    z-index:1;
-    background-color: rgb(30, 255, 0);
-}
-.mob-design-card3{
-    background-color: rgb(255, 234, 0);
-    transform: rotate(20deg);
-    z-index:0
+    .mob-design-card1 {
+        background-color: red;
+        transform: rotate(-20deg);
+        z-index: 2
+    }
 
-}
-.phone-3-others{
-    position: relative;
-    width:100%;
-    height:300vh;
+    .mob-design-card2 {
+        z-index: 1;
+        background-color: rgb(30, 255, 0);
+    }
 
-}
-.phone3-others-parent{
-    width:100%;
-    height:100vh;
-    background-color: palegoldenrod;
-    position: sticky;
-    top:0px;
-    left:0;
-    border:2px solid red;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-.phone3-others-photo{
-    width:100%;
-    height: 100vh;
-    position: absolute;
-    top:0;
-    left:0;
-}
+    .mob-design-card3 {
+        background-color: rgb(255, 234, 0);
+        transform: rotate(20deg);
+        z-index: 0
+    }
+
+    .phone-3-others {
+        position: relative;
+        width: 100%;
+        height: 320vh;
+
+    }
+
+    .phone3-others-parent {
+        width: 100%;
+        height: 100vh;
+        background-color: palegoldenrod;
+        position: sticky;
+        top: 0px;
+        left: 0;
+        /* border:2px solid red; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .phone3-others-photo {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        background-color: rgb(32, 31, 31);
+    }
 
 
     /*small screens*/
@@ -957,12 +983,12 @@
 
         .buy-phone3 {
             width: 95%;
-            left:2.5%;
+            left: 2.5%;
         }
 
         .hide-phone3 {
             width: 95%;
-            left:2.5%;
+            left: 2.5%;
         }
 
         .pc-sub-widgets-box {
@@ -973,7 +999,8 @@
             display: block;
             width: 100%;
 
-            background-color: rgb(192, 0, 240);
+            background: #424242;
+            background: linear-gradient(356deg, rgba(66, 66, 66, 1) 0%, rgba(0, 0, 0, 1) 100%, rgba(253, 187, 45, 1) 100%);
         }
 
         .pc-widgets {
