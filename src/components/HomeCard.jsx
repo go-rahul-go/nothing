@@ -26,11 +26,11 @@ const HomeCardProduct = ({id,iconURL,title,subtitle}) => {
     return (
         <div className='homecard-prod'>
             <Link className={`w-[90%] h-[155px] md:w-[38vw] md:h-[30vh] my-[10px] mx-auto inner-homecard-product ${id%2===0?"glass-white":"glass-black"}`} to="/" target='_blank'>
-               <span className={`w-[60%] h-full border border-red-500 px-4 py-5 flex flex-col justify-between ${id%2==0?"text-black":"text-white"}`}>
+               <span className={`w-[60%] h-full  px-4 py-5 flex flex-col justify-between ${id%2==0?"text-black":"text-white"}`}>
                      <p className='text-2xl '>{subtitle}</p>   
                      <p className='dotted text-xl font-bold'>{title}</p>
                </span>
-               <span className='w-[40%] md:w-[200px] h-full border border-red-500 overflow-hidden'>
+               <span className='w-[40%] md:w-[200px] h-full  overflow-hidden'>
                     <img src={iconURL} alt="" className='w-full h-full object-contain'/>
                </span>
             </Link>

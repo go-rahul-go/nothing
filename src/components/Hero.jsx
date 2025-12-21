@@ -33,11 +33,11 @@ const HeroProduct=()=>{
   return(
     <div className='hero-product' >
       <Link className='w-[90%] h-[22vh] md:w-[38vw] md:h-[30vh] my-[10px] mx-auto inner-hero-product' to="/phone3" target='_blank'>
-        <div className='w-[50%] h-full border border-red-500 px-4 py-5 flex flex-col justify-between text-white '>
+        <div className='w-[50%] h-full  px-4 py-5 flex flex-col justify-between text-white '>
           <p className='text-2xl'>Come to Play</p>
           <p className='dotted text-xl font-bold'>Phone(3)</p>
         </div>
-        <div className=' w-[40%] md:w-[200px] h-full border border-red-500'>
+        <div className=' w-[40%] md:w-[200px] h-full '>
             <img src={phone3} alt="" className='w-full h-full object-contain'/>
         </div>
       </Link>

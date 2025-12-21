@@ -263,7 +263,7 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: red;
+        /* background-color: red; */
         z-index: 1;
         overflow: hidden;
     }
@@ -271,7 +271,7 @@
     .hero-product {
         width: 100%;
 
-        border: 2px solid white;
+        /* border: 2px solid white; */
         position: absolute;
         bottom: 5px;
         left: 0;
@@ -309,7 +309,7 @@
         width: 100%;
         min-height: 100vh;
         position: relative;
-        background-color: rgb(221, 255, 0);
+        /* background-color: rgb(221, 255, 0); */
     }
 
     .home-card-bg {
@@ -318,7 +318,7 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: red;
+        /* background-color: red; */
         z-index: 1;
         overflow: hidden;
 
@@ -328,7 +328,7 @@
     .homecard-prod {
         width: 100%;
 
-        border: 2px solid rgb(255, 225, 0);
+        /* border: 2px solid rgb(255, 225, 0); */
         position: absolute;
         bottom: 5px;
         left: 0;
@@ -338,7 +338,7 @@
 
     .inner-homecard-product {
         display: flex;
-        border: 2px solid blue;
+        /* border: 2px solid blue; */
         border-radius: 10px;
         justify-content: space-between;
 
@@ -966,7 +966,19 @@
         overflow: hidden;
         background-color: rgb(32, 31, 31);
     }
-
+    .loader{
+        background-color: rgba(17, 17, 17, 0.74);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        display: grid;
+        place-items: center;
+        color: ghostwhite;
+        background-image: url("./assets/phone3-assets/others2.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
 
     /*small screens*/
     @media (max-width: 768px) {

@@ -49,12 +49,12 @@ const NavBar = ({ changeMenuOpen }) => {
 
         <div className={`${showMenu ? "visible" : "hidden"} inner-menu  capitalize font-semibold`}>
           <div className='w-full  flex flex-col items-center py-[40px] md:py-3 uppercase text-4xl font-bold gap-7'>
-            <Link className='dotted'>shop all</Link>
-            <Link className='dotted'>phones</Link>
-            <Link className='dotted'>audio</Link>
-            <Link className='dotted'>watches</Link>
-            <Link className='dotted'>accessories</Link>
-            <Link className='dotted'>cmf</Link>
+            <Link className='dotted' to="/all-products/all" onClick={() => { changeMenu(false); changeMenuOpen(false) }}>shop all</Link>
+            <Link className='dotted' to="/all-products/phones" onClick={() => { changeMenu(false); changeMenuOpen(false) }}>phones</Link>
+            <Link className='dotted' to="/all-products/audio" onClick={() => { changeMenu(false); changeMenuOpen(false) }}>audio</Link>
+            <Link className='dotted' to="/all-products/watches" onClick={() => { changeMenu(false); changeMenuOpen(false) }}>watches</Link>
+            <Link className='dotted' to="/all-products/accesories" onClick={() => { changeMenu(false); changeMenuOpen(false) }}>accessories</Link>
+            <Link className='dotted' to="/all-products/cmf" onClick={() => { changeMenu(false); changeMenuOpen(false) }}>cmf</Link>
           </div>
 
         </div>
