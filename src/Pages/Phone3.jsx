@@ -17,7 +17,7 @@ import specsPic from "../assets/phone3-assets/specs.svg"
 import SpecBoxImg from '../assets/phone3-assets/specbox1.jpg'
 import everythingpic from "../assets/phone3-assets/everything-you-need.jpg"
 
-
+import downToggle from "../assets/phone3-assets/down-toggle.png"
 
 import truelensPic from "../assets/phone3-assets/truelens.jpg"
 import displayPic from "../assets/phone3-assets/display.png"
@@ -174,7 +174,11 @@ const BuyPhone3 = ({ subMenuVis }) => {
             </div>
             <div className='w-full  relative flex justify-between uppercase font-medium'>
                 <div className='w-[49%] py-3  bg-zinc-600 relative grid place-items-center text-slate-200 rounded-[7px] cursor-pointer text-[0.9rem] phone3-options' onClick={() => updateColorDialogue(!colorDialogue)}>
-                    <p >{color}</p>
+                    <span className='flex items-center gap-[5px] '>{color}
+                        <span className='w-[15px] h-[15px] overflow-hidden'>
+                            <img src={downToggle} alt="" className='w-full h-full object-contain' />
+                        </span>
+                    </span>
 
                     {
                         colorDialogue &&
@@ -187,7 +191,11 @@ const BuyPhone3 = ({ subMenuVis }) => {
 
 
                 <div className='w-[49%] p-3  bg-zinc-600 relative rounded-[7px] grid place-items-center text-slate-200 cursor-pointer  phone3-options text-[0.9rem] ' onClick={() => updateSizeDialogue(!sizeDialogue)}>
-                    <p >{size}</p>
+                    <span className='flex items-center gap-[5px] '>{size}
+                        <span className='w-[15px] h-[15px] overflow-hidden'>
+                            <img src={downToggle} alt="" className='w-full h-full object-contain' />
+                        </span>
+                    </span>
                     {
                         sizeDialogue &&
                         <div className='w-[100%] py-2 phone3-size pl-3 text-[0.8rem] hover:bg-zinc-400  ' onClick={() => {
@@ -944,30 +952,7 @@ const MobSubWidgets = ({ specVisibility, showSpec }) => {
 
                     })
                 }
-                {/* <div className='w-full  bg-red-400 flex flex-col'>
-                    <div className='w-full h-[25vw] bg-blue-400'></div>
-                    <div className='text-center capitalize py-2'>glyph mirror</div>
-                </div>
-                <div className='w-full  bg-red-400 flex flex-col'>
-                    <div className='w-full h-[25vw] bg-blue-400'></div>
-                    <div className='text-center capitalize py-2'>performance</div>
-                </div>
-                <div className='w-full  bg-red-400 flex flex-col'>
-                    <div className='w-full h-[25vw] bg-blue-400'></div>
-                    <div className='text-center capitalize py-2'>design</div>
-                </div>
-                <div className='w-full  bg-red-400 flex flex-col'>
-                    <div className='w-full h-[25vw] bg-blue-400'></div>
-                    <div className='text-center capitalize py-2'>everything you need</div>
-                </div>
-                <div className='w-full  bg-red-400 flex flex-col opacity-0'>
-                    <div className='w-full h-[25vw] bg-blue-400'></div>
-                    <div className='text-center capitalize py-2'> </div>
-                </div>
-                <div className='w-full  bg-red-400 flex flex-col'>
-                    <div className='w-full h-[25vw] bg-blue-400'></div>
-                    <div className='text-center capitalize py-2'>camera in action</div>
-                </div> */}
+
             </div>
         </div>
     )

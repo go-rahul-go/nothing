@@ -37,7 +37,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        border: 2px solid rgb(0, 0, 0);
+        /* border: 2px solid rgb(0, 0, 0); */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -71,9 +71,9 @@
         align-items: center;
         position: relative;
         padding: 0px 10px;
-         background-color: rgba(71, 71, 71, 0.741);
+         /* background-color: rgba(71, 71, 71, 0.741);
         backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px); */
         color:ghostwhite
 
     }
@@ -579,7 +579,7 @@
         position: absolute;
         bottom: 45%;
         left: 17%;
-        background-color: red;
+        /* background-color: red; */
         z-index: 3;
     }
 
@@ -598,7 +598,7 @@
         top: 40%;
         right: 10%;
         z-index: 3;
-        border: 2px solid red;
+        /* border: 2px solid red; */
         display: grid;
         place-items: center;
         transition: all 100ms linear;
@@ -622,20 +622,20 @@
     }
 
     .stacked-card1 {
-        background-color: tomato;
+        /* background-color: tomato; */
         z-index: 3;
         transform: rotate(25deg);
         transition: all 100ms linear;
     }
 
     .stacked-card2 {
-        background-color: rgb(4, 47, 174);
+        /* background-color: rgb(4, 47, 174); */
         z-index: 2;
 
     }
 
     .stacked-card3 {
-        background-color: rgb(255, 212, 19);
+        /* background-color: rgb(255, 212, 19); */
         z-index: 1;
         transform: rotate(-25deg);
         transition: all 100ms linear;
@@ -657,7 +657,7 @@
         position: absolute;
         bottom: 20%;
         right: 5%;
-        background-color: yellow;
+        /* background-color: yellow; */
     }
 
     .pro-camera-pc::after {
@@ -694,7 +694,7 @@
     .performance-pc {
         width: 150px;
         height: 150px;
-        background-color: chocolate;
+        /* background-color: chocolate; */
         position: absolute;
         bottom: 16%;
         left: 3%;
@@ -720,7 +720,7 @@
         z-index: 4;
         width: 100%;
         height: 100%;
-        background-color: rgba(159, 159, 159, 0.56);
+        /* background-color: rgba(159, 159, 159, 0.56); */
         padding: 20px 0px;
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
@@ -781,7 +781,7 @@
 
     .display-pc {
         position: absolute;
-        background-color: tomato;
+        /* background-color: tomato; */
         top: 15%;
         left: 25%;
     }
@@ -803,7 +803,7 @@
         height: 150px;
         top: 15%;
         left: 40%;
-        background-color: chartreuse;
+        /* background-color: chartreuse; */
     }
 
     .camera-pc::after {
@@ -818,7 +818,7 @@
 
     .everything-pc {
         position: absolute;
-        background-color: tan;
+        /* background-color: tan; */
         right: 20%;
         top: 30%;
     }
@@ -839,7 +839,7 @@
         position: absolute;
         bottom: 28%;
         right: 30%;
-        background-color: blue;
+        /* background-color: blue; */
     }
 
     .nothing-os-pc::after {
@@ -856,7 +856,7 @@
 
     .glyph-mirror-pc {
         position: absolute;
-        background-color: plum;
+        /* background-color: plum; */
         bottom: 14%;
         right: 45%;
 
@@ -881,7 +881,7 @@
         width: 180px;
         height: 180px;
         left: 12%;
-        background-color: aqua;
+        /* background-color: aqua; */
     }
 
     .true-lens-pc::after {
@@ -912,25 +912,25 @@
         position: absolute;
         width: 65%;
         height: 75%;
-        background-color: antiquewhite;
+        /* background-color: antiquewhite; */
         border-radius: 10px;
         overflow: hidden;
 
     }
 
     .mob-design-card1 {
-        background-color: red;
+        /* background-color: red; */
         transform: rotate(-20deg);
         z-index: 2
     }
 
     .mob-design-card2 {
         z-index: 1;
-        background-color: rgb(30, 255, 0);
+        
     }
 
     .mob-design-card3 {
-        background-color: rgb(255, 234, 0);
+        /* background-color: rgb(255, 234, 0); */
         transform: rotate(20deg);
         z-index: 0
     }
@@ -945,7 +945,7 @@
     .phone3-others-parent {
         width: 100%;
         height: 100vh;
-        background-color: palegoldenrod;
+        /* background-color: palegoldenrod; */
         position: sticky;
         top: 0px;
         left: 0;
