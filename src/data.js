@@ -120,4 +120,17 @@ const footerData = [
         title: "newsletter"
     }
 ]
-export { data, footerData };
+
+
+const allproductsData={
+    "phones":[{title:"phone 1"},{title:"phone 1"},{title:"phone 1"}],
+    "watches":[{title:"watch 1"},{title:"watch 1"},{title:"watch 1"}],
+    "cmf":[{title:"cmf 1"},{title:"cmf 1"},{title:"cmf 1"}],
+    "accesories":[{title:"accesories 1"},{title:"accesories 1"},{title:"accesories 1"}],
+    "audio":[{title:"audio 1"},{title:"audio 1"},{title:"audio 1"}],
+    
+    "all":[]
+    
+    
+}
+export { data, footerData,allproductsData };
