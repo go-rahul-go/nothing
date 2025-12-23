@@ -1,64 +1,46 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useParams } from 'react-router'
 import { allproductsData } from '../data';
-
+import { useContext } from 'react';
+import { MenuContext } from '../App';
 const AllProducts = () => {
+  const menu=useContext(MenuContext)
   const { id } = useParams();
   const [products, changeProducts] = useState([]);
   const [pos, changePos] = useState(4)
   const index = useRef(0)
 
+
   let temp = []
 
   let getData = () => {
-    if (id !== "all") {
-      temp = pagination(allproductsData[id]);
-
-      changeProducts([...temp])
-    }
-
-    else {
-      let p = [...allproductsData['phones'], ...allproductsData['cmf'], ...allproductsData['watches'], ...allproductsData['audio'], ...allproductsData['accesories']]
-      temp = pagination(p);
-      console.log(p)
-      changeProducts([...temp])
-
-      // console.log(products)
-    }
-  }
-
-  let pagination = (data) => {
-    let p;
-
-
-    if (index.current <= data.length) {
+    // console.log(allproductsData[id].length)
+    if (index.current < allproductsData[id].length) {
       index.current += 4
-      p = data.slice(0, index.current);
-      console.log(index.current + p + " if")
+      console.log(" if ", index.current)
+      changeProducts([...allproductsData[id].slice(0, index.current)])
 
 
 
     }
-
     else {
-      p = data.slice(0, data.length);
-       index.current=0
-      console.log(p + " else ",index.current)
-      
-
-
+      index.current = allproductsData[id].length;
+      console.log(" else ", index.current)
+      changeProducts([...allproductsData[id].slice(0, index.current)])
+      // console.log( " else ", index.current)
     }
-    return p;
-
-
   }
 
+
+  // useEffect(() => {
+
+  // }, [])
 
   useEffect(() => {
+    index.current = 0
     getData();
-    index.current=0
-    console.log("use effect ",index.current)
-    
+    console.log(id + " use effect ")
+
 
 
 
@@ -76,19 +58,23 @@ const AllProducts = () => {
 
 
   return (
-    <div>{id}
+    <div className={menu?"h-[100vh] w-full overflow-hidden pt-[100px]":"min-h-[100vh] w-full pt-[100px]"}>{id}
       <div className='border border-black grid gap-2 grid-cols-3'>
         {
           products.map((item, index) => {
             return (
-              <div className='bg-blue-200 w-[100px] h-[100px]'>
-                {index}
-              </div>
+              <div className='w-[100px] h-[100px] bg-red-400 '>{index}</div>
             )
           })
         }
       </div>
-      <button onClick={() => getData()}  className='block w-full h-[100px] border border-black'>load more</button>
+
+      {
+        (index.current === allproductsData[id].length) ?
+          <p>no more products</p>
+          :
+          <button onClick={() => { getData(); console.log("click") }} className='block w-full h-[100px] border border-black'>load more</button>
+      }
     </div>
   )
 }
