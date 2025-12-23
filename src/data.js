@@ -122,15 +122,48 @@ const footerData = [
 ]
 
 
-const allproductsData={
-    "phones":[{title:"phone 1"},{title:"phone 1"},{title:"phone 1"}],
-    "watches":[{title:"watch 1"},{title:"watch 1"},{title:"watch 1"}],
-    "cmf":[{title:"cmf 1"},{title:"cmf 1"},{title:"cmf 1"}],
-    "accesories":[{title:"accesories 1"},{title:"accesories 1"},{title:"accesories 1"}],
-    "audio":[{title:"audio 1"},{title:"audio 1"},{title:"audio 1"}],
-    
-    "all":[]
-    
-    
+const allproductsData = {
+    "phones": [
+        { title: "phone 1" },
+        { title: "phone 2" },
+        { title: "phone 3" },
+        { title: "phone 4" },
+        { title: "phone 5" },
+        { title: "phone 6" },
+        { title: "phone 7" },
+        { title: "phone 8" },
+        { title: "phone 9" },
+        { title: "phone 10" }
+    ],
+    "watches": [
+        { title: "watch 1" },
+        { title: "watch 2" },
+        { title: "watch 3" }
+    ],
+    "cmf": [
+        { title: "cmf 1" }, 
+        { title: "cmf 2" }, 
+        { title: "cmf 3" },
+        {title:"cmf 4"},
+        {title:"cmf 5"},
+        {title:"cmf 6"},
+    ],
+    "accesories": [
+        { title: "accesories 1" }, 
+        { title: "accesories 1" }, 
+        { title: "accesories 1" }
+    ],
+    "audio": [
+        { title: "audio 1" },
+         { title: "audio 2" }, 
+         { title: "audio 3" }, 
+         { title: "audio 4" }, 
+         { title: "audio 5" },
+         { title: "audio 6" }
+        ],
+
+    "all": []
+
+
 }
-export { data, footerData,allproductsData };
+export { data, footerData, allproductsData };
