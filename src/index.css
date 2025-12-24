@@ -979,7 +979,9 @@
         background-size: cover;
     }
     
-
+.all-prod-title{
+    font-family: 'Courier New', Courier, monospace;
+}
     /*small screens*/
     @media (max-width: 768px) {
         .clock {

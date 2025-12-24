@@ -16,7 +16,7 @@ const AllProducts = () => {
   let getData = () => {
     // console.log(allproductsData[id].length)
     if (index.current < allproductsData[id].length) {
-      index.current += 4
+      index.current += 6
       console.log(" if ", index.current)
       changeProducts([...allproductsData[id].slice(0, index.current)])
 
@@ -58,12 +58,13 @@ const AllProducts = () => {
 
 
   return (
-    <div className={menu?"h-[100vh] w-full overflow-hidden pt-[100px]":"min-h-[100vh] w-full pt-[100px]"}>{id}
-      <div className='border border-black grid gap-2 grid-cols-3'>
+    <div className={menu?"h-[100vh] w-full overflow-hidden pt-[60px]":"min-h-[100vh] w-full pt-[60px]"}>
+      <p className='text-center text-4xl font-semibold capitalize py-[50px] dotted'>{id==="all"?"all products":id}</p>
+      <div className='border border-black grid gap-3 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-[75%] mx-auto'>
         {
           products.map((item, index) => {
             return (
-              <div className='w-[100px] h-[100px] bg-red-400 '>{index}</div>
+              <div className='w-full h-[60vh] md:h-[400px] xl:h-[400px] bg-red-400 '>{index}</div>
             )
           })
         }

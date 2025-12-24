@@ -29,6 +29,27 @@ import locationicon from "./assets/footer assets/location-pin-alt-svgrepo-com.sv
 import newsIcon from "./assets/footer assets/inbox-newsletter-svgrepo-com.svg"
 import downIcon from "./assets/footer assets/down-arrow-5-svgrepo-com.svg"
 
+//all products data imports
+import phone3white from "./assets/all-products-assets/phones/Phone-3-white.png"
+import phone3black from "./assets/all-products-assets/phones/Phone-3-black.png"
+import phone3alitewhite from "./assets/all-products-assets/phones/phone3a-lite-white.png"
+import phone3aliteblack from "./assets/all-products-assets/phones/phone3a-lite-black.png"
+import phone3aliteblue from "./assets/all-products-assets/phones/phone3a-lite-blue.png"
+import phone3aprogray from "./assets/all-products-assets/phones/Phone-3a-Pro-grey.png"
+import phone3aproblack from "./assets/all-products-assets/phones/Phone-3a-Pro-black.png"
+import phone3ablue from "./assets/all-products-assets/phones/Phone-3a-blue.png"
+import phone3ablack from "./assets/all-products-assets/phones/Phone-3a-black.png"
+import phone3awhite from "./assets/all-products-assets/phones/Phone-3a-white.png"
+import phone3acomm from "./assets/all-products-assets/phones/Phone-3a-Community-Editon.png"
+import cmfphone2proOrange from "./assets/all-products-assets/phones/CMF-Phone-2-Pro-Orange.png"
+import cmfphone2proBlack from "./assets/all-products-assets/phones/CMF-Phone-2-Pro-black.png"
+import cmfphone2proWhite from "./assets/all-products-assets/phones/CMF-Phone-2-Pro-lightgrey.png"
+import cmfphone2proGreen from "./assets/all-products-assets/phones/CMF-Phone-2-Pro-Lightgreen.png"
+import cmf1black from "./assets/all-products-assets/phones/CMF-Phone-1-Black.png"
+import cmf1orange from "./assets/all-products-assets/phones/CMF-Phone-1-Orange.png"
+import cmf1green from "./assets/all-products-assets/phones/CMF-Phone-1-Lightgreen.png"
+
+
 
 const data = [
 
@@ -124,16 +145,24 @@ const footerData = [
 
 const allproductsData = {
     "phones": [
-        { title: "phone 1" },
-        { title: "phone 2" },
-        { title: "phone 3" },
-        { title: "phone 4" },
-        { title: "phone 5" },
-        { title: "phone 6" },
-        { title: "phone 7" },
-        { title: "phone 8" },
-        { title: "phone 9" },
-        { title: "phone 10" }
+        { title: "phone 1",url:phone3white },
+        { title: "phone 2",url:phone3black },
+        { title: "phone 3",url:phone3alitewhite },
+        { title: "phone 4",url:phone3aliteblack },
+        { title: "phone 5",url:phone3aliteblue },
+        { title: "phone 6",url:phone3aproblack },
+        { title: "phone 7" ,url:phone3aprogray},
+        { title: "phone 8",url:phone3awhite },
+        { title: "phone 9",url:phone3ablack },
+        { title: "phone 10",url:phone3ablue },
+        { title: "phone 11",url:phone3acomm },
+        {title:"phone 12",url:cmfphone2proBlack},
+        {title:"phone 13",url:cmfphone2proWhite},
+        {title:"phone 14",url:cmfphone2proGreen},
+        {title:"phone 15",url:cmfphone2proOrange},
+        {title:"phone 16",url:cmf1black},
+        {title:"phone 17",url:cmf1green},
+        {title:"phone 18",url:cmf1orange}
     ],
     "watches": [
         { title: "watch 1" },
@@ -163,16 +192,24 @@ const allproductsData = {
     ],
 
     "all": [
-        { title: "phone 1" },
-        { title: "phone 2" },
-        { title: "phone 3" },
-        { title: "phone 4" },
-        { title: "phone 5" },
-        { title: "phone 6" },
-        { title: "phone 7" },
-        { title: "phone 8" },
-        { title: "phone 9" },
-        { title: "phone 10" },
+        { title: "phone 1",url:phone3white },
+        { title: "phone 2",url:phone3black },
+        { title: "phone 3",url:phone3alitewhite },
+        { title: "phone 4",url:phone3aliteblack },
+        { title: "phone 5",url:phone3aliteblue },
+        { title: "phone 6",url:phone3aproblack },
+        { title: "phone 7" ,url:phone3aprogray},
+        { title: "phone 8",url:phone3awhite },
+        { title: "phone 9",url:phone3ablack },
+        { title: "phone 10",url:phone3ablue },
+        { title: "phone 11",url:phone3acomm },
+        {title:"phone 12",url:cmfphone2proBlack},
+        {title:"phone 13",url:cmfphone2proWhite},
+        {title:"phone 14",url:cmfphone2proGreen},
+        {title:"phone 15",url:cmfphone2proOrange},
+        {title:"phone 16",url:cmf1black},
+        {title:"phone 17",url:cmf1green},
+        {title:"phone 18",url:cmf1orange},
         { title: "watch 1" },
         { title: "watch 2" },
         { title: "watch 3" },
