@@ -982,6 +982,15 @@
 .all-prod-title{
     font-family: 'Courier New', Courier, monospace;
 }
+.all-prod-image{
+    background-color: rebeccapurple;
+    width:100%;
+    height:400px;
+    object-fit: contain;
+}
+/* .lazy-load-image-background{
+    background-color: red;
+} */
     /*small screens*/
     @media (max-width: 768px) {
         .clock {
