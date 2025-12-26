@@ -49,6 +49,36 @@ import cmf1black from "./assets/all-products-assets/phones/CMF-Phone-1-Black.png
 import cmf1orange from "./assets/all-products-assets/phones/CMF-Phone-1-Orange.png"
 import cmf1green from "./assets/all-products-assets/phones/CMF-Phone-1-Lightgreen.png"
 
+import watchOrange from "./assets/all-products-assets/watches/CMF-Watch-Pro-2-Orange.png"
+import watchBlack from "./assets/all-products-assets/watches/CMF-Watch-Pro-2-Black.png"
+import watchBlue from "./assets/all-products-assets/watches/CMF-Watch-Pro-2-Blue.png"
+import watchGray from "./assets/all-products-assets/watches/CMF-Watch-Pro-2-Grey.png"
+
+import headphoneblack from "./assets/all-products-assets/audio/Headphone1-black.png"
+import headphonewhite from "./assets/all-products-assets/audio/Headphone1-white.png"
+import earAwhite from "./assets/all-products-assets/audio/Ear-a-white.png"
+import earAblack from "./assets/all-products-assets/audio/Ear-a-black.png"
+import earAyellow from "./assets/all-products-assets/audio/Ear-a-yellow.png"
+import earOpen from "./assets/all-products-assets/audio/Ear-open-white.png"
+import earblack from "./assets/all-products-assets/audio/Ear-black.png"
+import earwhite from './assets/all-products-assets/audio/Ear-white.png'
+import cmfbuds2pluswhite from "./assets/all-products-assets/audio/CMF-Buds-2-Plus-case-lightgrey.png"
+import cmfbuds2plusblue from "./assets/all-products-assets/audio/CMF-Buds-2-Plus-case-blue.png"
+import cmfbuds2gray from "./assets/all-products-assets/audio/CMF-Buds-2-case-darkgrey.png"
+import cmfbuds2green from "./assets/all-products-assets/audio/CMF-Buds-2-case-lightgreen.png"
+import cmfbuds2a from "./assets/all-products-assets/audio/CMF-Buds-2a-case-black.png"
+
+import phone3acase from "./assets/all-products-assets/accesories/Phone-3a-case.png"
+import phone3aprocase from './assets/all-products-assets/accesories/Phone-3a-Pro-case.png'
+import cable100 from "./assets/all-products-assets/accesories/Cable-cc-100.png"
+import cable180 from "./assets/all-products-assets/accesories/Cable-cc-180.png"
+import hoodie from "./assets/all-products-assets/accesories/Nothing-Hoodie.png"
+import trackjacket from "./assets/all-products-assets/accesories/Nothing-Tracksuit-Jacket.png"
+import trackpant from "./assets/all-products-assets/accesories/Nothing-Tracksuit-Trousers.png"
+import overall from "./assets/all-products-assets/accesories/Nothing-Overall.png"
+import labcoat from "./assets/all-products-assets/accesories/Nothing-Lab-Coat.png"
+import cap from "./assets/all-products-assets/accesories/Apparel-Nothing-Cap.png"
+
 
 
 const data = [
@@ -145,89 +175,136 @@ const footerData = [
 
 const allproductsData = {
     "phones": [
-        { title: "phone 1",url:phone3white },
-        { title: "phone 2",url:phone3black },
-        { title: "phone 3",url:phone3alitewhite },
-        { title: "phone 4",url:phone3aliteblack },
-        { title: "phone 5",url:phone3aliteblue },
-        { title: "phone 6",url:phone3aproblack },
-        { title: "phone 7" ,url:phone3aprogray},
-        { title: "phone 8",url:phone3awhite },
-        { title: "phone 9",url:phone3ablack },
-        { title: "phone 10",url:phone3ablue },
-        { title: "phone 11",url:phone3acomm },
-        {title:"phone 12",url:cmfphone2proBlack},
-        {title:"phone 13",url:cmfphone2proWhite},
-        {title:"phone 14",url:cmfphone2proGreen},
-        {title:"phone 15",url:cmfphone2proOrange},
-        {title:"phone 16",url:cmf1black},
-        {title:"phone 17",url:cmf1green},
-        {title:"phone 18",url:cmf1orange}
+        { title: "phone 3", url: phone3white },
+        { title: "phone 3", url: phone3black },
+        { title: "phone 3a lite", url: phone3alitewhite },
+        { title: "phone 3a lite", url: phone3aliteblack },
+        { title: "phone 3a lite", url: phone3aliteblue },
+        { title: "phone 3a pro", url: phone3aproblack },
+        { title: "phone 3a pro", url: phone3aprogray },
+        { title: "phone3a", url: phone3awhite },
+        { title: "phone3a", url: phone3ablack },
+        { title: "phone3a", url: phone3ablue },
+        { title: "phone 3a community edition", url: phone3acomm },
+        { title: "CMF phone pro", url: cmfphone2proBlack },
+        { title: "CMF phone pro", url: cmfphone2proWhite },
+        { title: "CMF phone pro", url: cmfphone2proGreen },
+        { title: "CMF phone pro", url: cmfphone2proOrange },
+        { title: "CMF 1", url: cmf1black },
+        { title: "CMF 1", url: cmf1green },
+        { title: "CMF 1", url: cmf1orange },
     ],
     "watches": [
-        { title: "watch 1" },
-        { title: "watch 2" },
-        { title: "watch 3" }
+        { title: "CMF Watch pro 2", url: watchOrange },
+        { title: "CMF Watch pro 2", url: watchBlack },
+        { title: "CMF Watch pro 2", url: watchBlue },
+        { title: "CMF Watch pro 2", url: watchGray },
     ],
     "cmf": [
-        { title: "cmf 1" },
-        { title: "cmf 2" },
-        { title: "cmf 3" },
-        { title: "cmf 4" },
-        { title: "cmf 5" },
-        { title: "cmf 6" },
+        { title: "CMF phone 2 pro", url: cmfphone2proBlack },
+        { title: "CMF phone 2 pro", url: cmfphone2proWhite },
+        { title: "CMF phone 2 pro", url: cmfphone2proGreen },
+        { title: "CMF phone 2 pro", url: cmfphone2proOrange },
+        { title: "CMF 1", url: cmf1black },
+        { title: "CMF 1", url: cmf1green },
+        { title: "CMF 1", url: cmf1orange },
+        { title: "CMF Watch pro 2", url: watchOrange },
+        { title: "CMF Watch pro 2", url: watchBlack },
+        { title: "CMF Watch pro 2", url: watchBlue },
+        { title: "CMF Watch pro 2", url: watchGray },
+        { title: "CMF buds 2", url: cmfbuds2gray },
+        { title: "CMF buds 2", url: cmfbuds2green },
+
+        { title: "CMF buds 2 plus", url: cmfbuds2plusblue },
+        { title: "CMF buds 2 plus", url: cmfbuds2pluswhite },
+        { title: "CMF buds 2a", url: cmfbuds2a }
     ],
     "accesories": [
-        { title: "accesories 1" },
-        { title: "accesories 1" },
-        { title: "accesories 1" }
+        { title: "phone 3a case" ,url:phone3acase},
+        { title: "phone 3a pro case",url:phone3aprocase },
+        { title: "cable 100",url:cable100 },
+        { title: "cable 180",url:cable180 },
+        { title: "Nothing track jacket",url:trackjacket },
+        { title: "Nothing track pant" ,url:trackpant},
+        
+        { title: "Nothing overall" ,url:overall},
+        { title: "Nothing cap",url:cap },
+  
+        { title: "Nothing lab coat" ,url:labcoat},
+        { title: "Nothing hoodie",url:hoodie },
+    
     ],
     "audio": [
-        { title: "audio 1" },
-        { title: "audio 2" },
-        { title: "audio 3" },
-        { title: "audio 4" },
-        { title: "audio 5" },
-        { title: "audio 6" }
+        { title: "Headphone 1", url: headphoneblack },
+        { title: "Headphone 1", url: headphonewhite },
+        { title: "ear a", url: earAwhite },
+        { title: "ear a", url: earAblack },
+        { title: "ear a", url: earAyellow },
+        { title: "ear open", url: earOpen },
+
+        { title: "ear white", url: earblack },
+        { title: "ear white", url: earwhite },
+
+        { title: "CMF buds 2", url: cmfbuds2gray },
+        { title: "CMF buds 2", url: cmfbuds2green },
+
+        { title: "CMF buds 2 plus", url: cmfbuds2plusblue },
+        { title: "CMF buds 2 plus", url: cmfbuds2pluswhite },
+        { title: "CMF buds 2a", url: cmfbuds2a }
     ],
 
     "all": [
-        { title: "phone 1",url:phone3white },
-        { title: "phone 2",url:phone3black },
-        { title: "phone 3",url:phone3alitewhite },
-        { title: "phone 4",url:phone3aliteblack },
-        { title: "phone 5",url:phone3aliteblue },
-        { title: "phone 6",url:phone3aproblack },
-        { title: "phone 7" ,url:phone3aprogray},
-        { title: "phone 8",url:phone3awhite },
-        { title: "phone 9",url:phone3ablack },
-        { title: "phone 10",url:phone3ablue },
-        { title: "phone 11",url:phone3acomm },
-        {title:"phone 12",url:cmfphone2proBlack},
-        {title:"phone 13",url:cmfphone2proWhite},
-        {title:"phone 14",url:cmfphone2proGreen},
-        {title:"phone 15",url:cmfphone2proOrange},
-        {title:"phone 16",url:cmf1black},
-        {title:"phone 17",url:cmf1green},
-        {title:"phone 18",url:cmf1orange},
-        { title: "watch 1" },
-        { title: "watch 2" },
-        { title: "watch 3" },
-        { title: "cmf 1" },
-        { title: "cmf 2" },
-        { title: "cmf 3" },
-        { title: "cmf 4" },
-        { title: "cmf 5" },
-        { title: "cmf 6" },
-         { title: "accesories 1" },
-        { title: "accesories 1" },
-        { title: "accesories 1" },
-        { title: "audio 1" },
-        { title: "audio 2" },
-        { title: "audio 3" },
-        { title: "audio 4" },
-        { title: "audio 5" },
-        { title: "audio 6" }
+        { title: "phone 3", url: phone3white },
+        { title: "phone 3", url: phone3black },
+        { title: "phone 3a lite", url: phone3alitewhite },
+        { title: "phone 3a lite", url: phone3aliteblack },
+        { title: "phone 3a lite", url: phone3aliteblue },
+        { title: "phone 3a pro", url: phone3aproblack },
+        { title: "phone 3a pro", url: phone3aprogray },
+        { title: "phone3a", url: phone3awhite },
+        { title: "phone3a", url: phone3ablack },
+        { title: "phone3a", url: phone3ablue },
+        { title: "phone 3a community edition", url: phone3acomm },
+        { title: "CMF phone pro", url: cmfphone2proBlack },
+        { title: "CMF phone pro", url: cmfphone2proWhite },
+        { title: "CMF phone pro", url: cmfphone2proGreen },
+        { title: "CMF phone pro", url: cmfphone2proOrange },
+        { title: "CMF 1", url: cmf1black },
+        { title: "CMF 1", url: cmf1green },
+        { title: "CMF 1", url: cmf1orange },
+        { title: "CMF Watch pro 2", url: watchOrange },
+        { title: "CMF Watch pro 2", url: watchBlack },
+        { title: "CMF Watch pro 2", url: watchBlue },
+        { title: "CMF Watch pro 2", url: watchGray },
+        { title: "Headphone 1", url: headphoneblack },
+        { title: "Headphone 1", url: headphonewhite },
+        { title: "ear a", url: earAwhite },
+        { title: "ear a", url: earAblack },
+        { title: "ear a", url: earAyellow },
+        { title: "ear open", url: earOpen },
+
+        { title: "ear white", url: earblack },
+        { title: "ear white", url: earwhite },
+
+        { title: "CMF buds 2", url: cmfbuds2gray },
+        { title: "CMF buds 2", url: cmfbuds2green },
+
+        { title: "CMF buds 2 plus", url: cmfbuds2plusblue },
+        { title: "CMF buds 2 plus", url: cmfbuds2pluswhite },
+        { title: "CMF buds 2a", url: cmfbuds2a },
+        { title: "phone 3a case" ,url:phone3acase},
+        { title: "phone 3a pro case",url:phone3aprocase },
+        { title: "cable 100",url:cable100 },
+        { title: "cable 180",url:cable180 },
+        { title: "Nothing track jacket",url:trackjacket },
+        { title: "Nothing track pant" ,url:trackpant},
+        
+        { title: "Nothing overall" ,url:overall},
+        { title: "Nothing cap",url:cap },
+  
+        { title: "Nothing lab coat" ,url:labcoat},
+        { title: "Nothing hoodie",url:hoodie },
+
     ]
 
 
