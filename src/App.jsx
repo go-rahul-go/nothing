@@ -1,6 +1,6 @@
 
 
-import { Routes, Route } from 'react-router'
+import { Routes, Route, useParams } from 'react-router'
 
 import NavBar from './components/NavBar';
 import { useState, useEffect, useContext, createContext } from 'react';
@@ -18,6 +18,7 @@ const Phone3 = lazy(()=>import("./Pages/Phone3"))
 
 function App() {
   const [menuOpen, changeMenuOpen] = useState(false)
+  const {id}=useParams();
 
 
   return (

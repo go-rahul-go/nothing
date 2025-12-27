@@ -6,6 +6,7 @@ import { MenuContext } from '../App';
 import { LazyLoadComponent, LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import notfound from "../assets/image-not-found.png"
+import Footer from '../components/Footer';
 
 
 
@@ -49,8 +50,8 @@ const AllProducts = () => {
     getData();
     // console.log(id + " use effect ")
 
-    document.title=`${id.toUpperCase()} | Nothing IN`
-
+    document.title = `${id.toUpperCase()} | Nothing IN`
+    window.moveTo(0,0)
 
 
 
@@ -63,7 +64,7 @@ const AllProducts = () => {
   // console.log(allproductsData[id])
   // changeProducts([...allproductsData.getAllproducts()])
 
- 
+
 
 
 
@@ -77,7 +78,7 @@ const AllProducts = () => {
               <div className='w-full h-[350px]  bg-red-400 flex flex-col relative gap-2' key={index} >
                 <div className='w-full h-[80%] border overflow-hidden bg-green-500 grid place-items-center other-prod-box'>
                   <LazyLoadImage src={item.url} effect='blur' alt={"not found"} style={{ height: "290px", objectFit: "contain", width: "300px", border: "2px solid red" }} wrapperProps={{
-                    
+
                     style: { transitionDelay: "0.3s" },
                   }} />
                 </div>
@@ -87,13 +88,15 @@ const AllProducts = () => {
           })
         }
       </div>
-
-      {
-        (index.current >= allproductsData[id].length) ?
-          <p>no more products</p>
-          :
-          <button onClick={() => { getData(); }} className='block w-full h-[100px] border border-black ' id="load-more">load more</button>
-      }
+      <div className='w-full border border-red-500 flex justify-center items-center py-5'>
+        {
+          (index.current >= allproductsData[id].length) ?
+            <p className='uppercase font-semibold'>no more products</p>
+            :
+            <button onClick={() => { getData(); }} className='block py-2 px-4 border border-black w-[90%] md:w-[40%] bg-black text-slate-200 uppercase font-semibold rounded' id="load-more">load more</button>
+        }
+      </div>
+     <Footer/>   
     </div>
   )
 }

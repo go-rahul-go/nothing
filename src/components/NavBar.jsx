@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
-import { Link } from 'react-router'
+import { Link, useParams } from 'react-router'
 
 import menuIcon from "../assets/menu.svg"
 import closeIcon from "../assets/close.svg"
@@ -13,6 +13,7 @@ const NavBar = ({ changeMenuOpen }) => {
   const [showMenu, changeMenu] = useState(false)
   const [menuVis, menuVisible] = useState(true)
 
+  
   useEffect(() => {
 
     function handleScroll() {

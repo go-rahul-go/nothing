@@ -10,11 +10,11 @@ const Footer = () => {
   return (
     <div className="w-full min-h-[100vh] bg-black footer">
       <div className={"w-full py-[12vh] border border-red-500 text-white flex flex-col justify-center items-center gap-4 text-3xl md:text-5xl"}>
-        <Link className='dotted  uppercase font-semibold'>shop all</Link>
-        <Link className='dotted  uppercase font-semibold'>phones</Link>
-        <Link className='dotted  uppercase font-semibold'>watches</Link>
-        <Link className='dotted  uppercase font-semibold'>accesories</Link>
-        <Link className='dotted  uppercase font-semibold'>cmf</Link>
+        <Link className='dotted  uppercase font-semibold' to="/all-products/all">shop all</Link>
+        <Link className='dotted  uppercase font-semibold' to="/all-products/phones">phones</Link>
+        <Link className='dotted  uppercase font-semibold' to="/all-products/watches">watches</Link>
+        <Link className='dotted  uppercase font-semibold' to="/all-products/accesories">accesories</Link>
+        <Link className='dotted  uppercase font-semibold' to="/all-products/cmf">cmf</Link>
       </div>
 
 
