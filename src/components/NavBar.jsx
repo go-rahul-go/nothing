@@ -34,6 +34,8 @@ const NavBar = ({ changeMenuOpen }) => {
     }
 
   }, [prevPos])
+
+  
   return (
     <div className={`${menuVis ? "navbar" : "navbar-hide"} ${showMenu ? "navbar-expand glass" : "no-glass"}`}>
       <div className=' w-[85%] md:w-[40%] h-full overflow-hidden menu-items'>

@@ -4,6 +4,7 @@ import { footerData } from '../data'
 import downArrow from "../assets/footer assets/down-arrow-5-svgrepo-com.svg";
 import closeicon from "../assets/footer assets/close-svgrepo-com.svg";
 const languages = ['french', 'english', 'spanish', 'italiano', 'chinese', 'turkey', 'arabic', 'japan']
+
 const Footer = () => {
   const [lang, setLang] = useState("english");
   const [langDialogue, langDialogueVisibility] = useState(false)

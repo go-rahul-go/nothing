@@ -8,7 +8,7 @@ import { useState, useEffect, useContext, createContext } from 'react';
 
 import Loader from './components/Loader';
 export const MenuContext = createContext()
-
+import Footer from './components/Footer';
 import { Suspense, lazy } from 'react';
 
 const AllProducts = lazy(() => import("./Pages/AllProducts"))
@@ -18,7 +18,9 @@ const Phone3 = lazy(()=>import("./Pages/Phone3"))
 
 function App() {
   const [menuOpen, changeMenuOpen] = useState(false)
-  const {id}=useParams();
+
+
+
 
 
   return (
@@ -32,6 +34,7 @@ function App() {
             <Route path="/all-products/:id" element={<AllProducts />} />
           </Routes>
         </MenuContext.Provider>
+        <Footer />
       </Suspense>
 
 

@@ -117,7 +117,7 @@ const Phone3 = () => {
                     showSpec && <Phone3Specs specVisibility={specVisibility} />
                 }
 
-                <Footer />
+             
             </div>
 
         </>

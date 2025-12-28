@@ -8,7 +8,9 @@
         box-sizing: border-box;
     }
 
-
+    html{
+        scroll-behavior: smooth;
+    }
     .dm-sans {
         font-family: "DM Sans", sans-serif;
         font-optical-sizing: auto;
@@ -988,10 +990,12 @@
     height:400px;
     object-fit: contain;
 }
-/* .lazy-load-image-background{
-    background-color: red;
-} */
-    /*small screens*/
+
+#load-more:hover{
+    outline: 2px solid black;
+    outline-offset: 2px;
+    transition: all 120ms linear;
+}
     @media (max-width: 768px) {
         .clock {
             left: 61%;

@@ -51,11 +51,14 @@ const AllProducts = () => {
     // console.log(id + " use effect ")
 
     document.title = `${id.toUpperCase()} | Nothing IN`
-    window.moveTo(0,0)
+
+    window.scrollTo(0, 0)
+
 
 
 
   }, [id])
+
 
 
 
@@ -69,15 +72,16 @@ const AllProducts = () => {
 
 
   return (
-    <div className={menu ? "h-[100vh] w-full overflow-hidden pt-[60px]" : "min-h-[100vh] w-full pt-[60px]"}>
+    <div className={menu ? "h-[100vh] w-full overflow-hidden pt-[60px] bg-slate-100" : " w-full pt-[60px] all-prod-container bg-slate-100"}>
+
       <p className='text-center text-4xl font-semibold capitalize py-[50px] dotted'>{id === "all" ? "all products" : id}</p>
-      <div className='border border-black grid gap-3 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-[90%] md:w-[80%] mx-auto'>
+      <div className={id==="all"?"border border-black grid gap-3 grid-cols-1 md:grid-cols-3 xl:grid-cols-5 w-[90%]  mx-auto":"border border-black grid gap-3 grid-cols-1 md:grid-cols-2 xl:grid-cols-3  w-[90%]  xl:w-[80%] mx-auto"}>
         {
           products.map((item, index) => {
             return (
-              <div className='w-full h-[350px]  bg-red-400 flex flex-col relative gap-2' key={index} >
-                <div className='w-full h-[80%] border overflow-hidden bg-green-500 grid place-items-center other-prod-box'>
-                  <LazyLoadImage src={item.url} effect='blur' alt={"not found"} style={{ height: "290px", objectFit: "contain", width: "300px", border: "2px solid red" }} wrapperProps={{
+              <div className='w-full    flex flex-col relative gap-2 ' key={index} >
+                <div className='w-full  border overflow-hidden  grid place-items-center other-prod-box'>
+                  <LazyLoadImage src={item.url} effect='blur' alt={"not found"} style={{ height: "300px", objectFit: "contain", width: "300px", border: "2px solid red" }} wrapperProps={{
 
                     style: { transitionDelay: "0.3s" },
                   }} />
@@ -88,7 +92,7 @@ const AllProducts = () => {
           })
         }
       </div>
-      <div className='w-full border border-red-500 flex justify-center items-center py-5'>
+      <div className='w-full border border-red-500 flex justify-center items-center py-5 my-5'>
         {
           (index.current >= allproductsData[id].length) ?
             <p className='uppercase font-semibold'>no more products</p>
@@ -96,7 +100,7 @@ const AllProducts = () => {
             <button onClick={() => { getData(); }} className='block py-2 px-4 border border-black w-[90%] md:w-[40%] bg-black text-slate-200 uppercase font-semibold rounded' id="load-more">load more</button>
         }
       </div>
-     <Footer/>   
+
     </div>
   )
 }
