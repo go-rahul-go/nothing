@@ -227,7 +227,7 @@ const allproductsData = {
         { title: "Nothing track jacket",url:trackjacket },
         { title: "Nothing track pant" ,url:trackpant},
         
-        { title: "Nothing overall" ,url:overall},
+        { title: "Nothing overalls" ,url:overall},
         { title: "Nothing cap",url:cap },
   
         { title: "Nothing lab coat" ,url:labcoat},

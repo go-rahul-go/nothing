@@ -86,7 +86,7 @@ const AllProducts = () => {
                     style: { transitionDelay: "0.3s" },
                   }} />
                 </div>
-                <span className='bg-yellow-300 text-center capitalize'>{item.title}</span>
+                <span className='bg-yellow-300 text-center capitalize font-medium text-[0.95rem]'>{item.title}</span>
               </div>
             )
           })
@@ -97,7 +97,7 @@ const AllProducts = () => {
           (index.current >= allproductsData[id].length) ?
             <p className='uppercase font-semibold'>no more products</p>
             :
-            <button onClick={() => { getData(); }} className='block py-2 px-4 border border-black w-[90%] md:w-[40%] bg-black text-slate-200 uppercase font-semibold rounded' id="load-more">load more</button>
+            <button onClick={() => { getData(); }} className='block py-3 px-4 border border-black w-[90%] md:w-[40%] bg-black text-slate-200 uppercase font-semibold rounded' id="load-more">load more</button>
         }
       </div>
 

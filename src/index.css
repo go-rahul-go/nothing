@@ -193,28 +193,23 @@
         right: 18%;
         border-radius: 10px;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+       
     }
 
     .calender::before {
         content: "";
         position: absolute;
-        width: 4px;
-        height: 4px;
+        width:6px;
+        height:6px;
         background-color: rgb(217, 0, 0);
         border-radius: 50%;
-        top: 7px;
-        left: 7px;
+        top: 9px;
+        left: 9px;
     }
 
-    .c-day {
-        position: absolute;
-        top: 2px;
-        right: 5px;
-        color: rgb(189, 0, 0);
-        font-size: 0.8rem;
-        font-weight: 500;
-        text-transform: capitalize;
-    }
+    
 
     .gly {
 
