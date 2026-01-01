@@ -92,7 +92,7 @@ const AllProducts = () => {
           })
         }
       </div>
-      <div className='w-full border border-red-500 flex justify-center items-center py-5 my-5'>
+      <div className='w-full flex justify-center items-center py-5 my-5'>
         {
           (index.current >= allproductsData[id].length) ?
             <p className='uppercase font-semibold'>no more products</p>

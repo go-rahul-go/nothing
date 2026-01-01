@@ -29,11 +29,11 @@ const Calender = () => {
 
   return (
     <div className='calender'>
-            <div className='text-end pr-2 py-1 capitalize text-[0.8rem] bg-slate-200 font-medium'>{day}</div>
-            <div className='text-center py-1'>
-              <span className='text-5xl font-semibold'>{date}</span>
-              <span className='capitalize text-[0.75rem] font-medium'> {month}</span>
+            <div className='text-end pr-2  py-[3px] capitalize text-[0.8rem] bg-slate-200 font-medium'>{day}</div>
+            <div className='text-center  text-5xl font-semibold '>
+              {date}
             </div>
+            <div className='text-center text-[0.8rem] uppercase font-semibold'>{month}</div>
            
     </div>
   )
