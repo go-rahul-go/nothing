@@ -12,7 +12,7 @@ const Calender = () => {
     }
 
     const whatMonth=(num)=>{
-      const month=["jan","feb","mar","apr","may","june","july","aug","sept","oct","nov","dec"]
+      const month=["january","febuary","march","april","may","june","july","august","september","octocer","november","december"]
       console.log(month[num])
 
       return month[num]
@@ -33,7 +33,7 @@ const Calender = () => {
             <div className='text-center  text-5xl font-semibold '>
               {date}
             </div>
-            <div className='text-center text-[0.8rem] uppercase font-semibold'>{month}</div>
+            <div className='text-center text-[0.8rem] uppercase font-normal'>{month}</div>
            
     </div>
   )
